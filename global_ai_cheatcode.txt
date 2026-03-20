@@ -1,0 +1,18 @@
+✅ Use a Virtual Environment (Very Important)
+python -m venv venv
+to activate:
+Windows:
+venv\Scripts\activate
+Mac/Linux:
+source venv/bin/activate
+
+✅ How to select a new venv:
+
+after activating the venv, open the desired .py or ipynb file . 
+click on select kernel , click python Environments, there it will show all venv. choose the one you need
+
+
+✅ Install libraries inside it:
+
+pip Install pandas numpy scikit-learn matplotlib ipykernel
+
