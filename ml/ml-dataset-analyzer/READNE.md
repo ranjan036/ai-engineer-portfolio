@@ -17,3 +17,23 @@ Statistical analysis
 Ploting histogram , to see how data is distributed 
 converting a folder to python package , so that we can import module from src folder . or any other folder if we want
 
+# Day 3 
+# ML Dataset Analyzer
+
+A reusable Python tool for:
+
+- Data analysis
+- Data preprocessing
+- Model training
+- Evaluation
+- Prediction
+
+## Features
+
+- Supports any dataset
+- Flexible model integration
+- Clean modular design
+
+## Usage
+
+python main.py

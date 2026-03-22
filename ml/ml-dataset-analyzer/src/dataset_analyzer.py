@@ -4,7 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
+import pickle 
+import os
 class DataSetAnalyzer:
     def __init__(self,filepath):
         self.filepath = filepath
@@ -79,13 +80,37 @@ class DataSetAnalyzer:
         if self.model is None:
             print("Model is not trained")
         else:
-            input_df = pd.DataFrame([input_data], columns=self.X.columns)
+            input_df = pd.DataFrame([input_data])
             prediction = self.model.predict(input_df)  
 
         return prediction[0]     
 
+    def save_model(self, file_path):
+
+        if self.model is None:
+            print("Model is not trained")
+            return
+        else:
+            folder = os.path.dirname(file_path)
+            if folder:
+                os.makedirs(folder, exist_ok = True)
+ 
+            
+            with open(file_path,"wb") as f:
+                pickle.dump(self.model, f)
+                 
 
 
+    def load_model(self, file_path):
+        if not os.path.exists(file_path):
+            print("File not found")
+            return
+        if os.path.isdir(file_path):
+            print("Invalid path: It is a directory")
+            return
+        with open(file_path,"rb") as f:
+            self.model = pickle.load(f) 
+        print("Model loaded successfully")               
 
 
     def run_all(self):
