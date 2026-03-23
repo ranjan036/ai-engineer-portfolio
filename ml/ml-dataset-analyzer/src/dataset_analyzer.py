@@ -77,13 +77,16 @@ class DataSetAnalyzer:
         return accuracy     
 
     def predict(self, input_data):
-        if self.model is None:
-            print("Model is not trained")
-        else:
-            input_df = pd.DataFrame([input_data])
-            prediction = self.model.predict(input_df)  
+        try:
+            
+                prediction = self.model.predict([input_data]) 
+                return prediction[0] 
+        except Exception as e:
+                print("prediction error:",e)
+                return None
+                          
 
-        return prediction[0]     
+           
 
     def save_model(self, file_path):
 
