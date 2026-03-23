@@ -82,7 +82,7 @@ class DataSetAnalyzer:
             return prediction[0] 
         except Exception as e:
                 print("prediction error:",e)
-                return None
+                return str(e)
                           
 
            

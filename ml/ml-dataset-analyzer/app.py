@@ -1,13 +1,18 @@
 #import lib
 import streamlit as st
 from src.dataset_analyzer import DataSetAnalyzer
-
+import os
 #load model
 analyzer = DataSetAnalyzer(None)
 
-DEFAULT_MODEL_PATH = "../../models/model.pkl"
+#DEFAULT_MODEL_PATH = "models/model.pkl"
 
-analyzer.load_model(DEFAULT_MODEL_PATH)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models/model.pkl")
+
+analyzer.load_model(MODEL_PATH)
+
 
 #UI
 #Title
