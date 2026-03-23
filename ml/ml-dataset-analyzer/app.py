@@ -5,7 +5,7 @@ from src.dataset_analyzer import DataSetAnalyzer
 #load model
 analyzer = DataSetAnalyzer(None)
 
-DEFAULT_MODEL_PATH = "models/model.pkl"
+DEFAULT_MODEL_PATH = "../../models/model.pkl"
 
 analyzer.load_model(DEFAULT_MODEL_PATH)
 
