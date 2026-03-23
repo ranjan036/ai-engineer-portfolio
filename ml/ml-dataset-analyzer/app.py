@@ -5,11 +5,11 @@ import os
 #load model
 analyzer = DataSetAnalyzer(None)
 
-#DEFAULT_MODEL_PATH = "models/model.pkl"
+MODEL_PATH = "models/model.pkl"
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "models/model.pkl")
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#MODEL_PATH = os.path.join(BASE_DIR, "models/model.pkl")
 
 analyzer.load_model(MODEL_PATH)
 
