@@ -78,9 +78,8 @@ class DataSetAnalyzer:
 
     def predict(self, input_data):
         try:
-            
-                prediction = self.model.predict([input_data]) 
-                return prediction[0] 
+            prediction = self.model.predict([input_data]) 
+            return prediction[0] 
         except Exception as e:
                 print("prediction error:",e)
                 return None
