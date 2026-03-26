@@ -17,3 +17,5 @@ __pycache__/
 # Logs
 *.log
 .vscode/
+#avoid checkinng in lagrge dataset
+ml/nyc-taxi/data
