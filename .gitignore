@@ -19,3 +19,5 @@ __pycache__/
 .vscode/
 #avoid checkinng in lagrge dataset
 ml/nyc-taxi/data
+
+dsa/
