@@ -201,5 +201,173 @@ Used for:
 ✔ Data type understanding is critical
 ✔ Always apply real-world constraints
 
+
+📘 ML Foundations – Summary Notes (Stage 1)
+
+---
+
+🧠 1. Machine Learning Basics
+
+Goal:
+y = f(x)
+
+- X → Features (input)
+- y → Target (output)
+
+---
+
+🧠 2. Linear Regression
+
+Model:
+y = mx + b
+
+- m → weight (impact of feature)
+- b → intercept (baseline)
+
+Objective:
+Minimize prediction error
+
+---
+
+🧠 3. Loss / Cost Function
+
+Without regularization:
+Loss = Error
+
+With regularization:
+Loss = Error + λ × Penalty
+
+---
+
+🧠 4. Evaluation Metrics
+
+MAE:
+|actual - predicted|
+
+- Treats all errors equally
+- Robust to outliers
+
+MSE:
+(actual - predicted)²
+
+- Penalizes large errors heavily
+- Sensitive to outliers
+
+Use:
+
+- MAE → noisy real-world data
+- MSE → when large errors are critical
+
+---
+
+🧠 5. Overfitting vs Underfitting
+
+Overfitting:
+
+- Low training error
+- High test error
+- Learns noise
+  → High variance
+
+Underfitting:
+
+- High training error
+- High test error
+- Too simple
+  → High bias
+
+Good Fit:
+
+- Low training error
+- Low test error
+
+---
+
+🧠 6. Bias vs Variance
+
+Bias → model too simple
+Variance → model too sensitive
+
+- Overfitting → Low bias, High variance
+- Underfitting → High bias, Low variance
+
+---
+
+🧠 7. Regularization
+
+Purpose:
+Control model complexity
+
+Formula:
+Loss = Error + λ × Penalty
+
+---
+
+Types:
+
+L1 (Lasso):
+Penalty = |w|
+
+- Some weights become 0
+- Feature selection
+
+L2 (Ridge):
+Penalty = w²
+
+- Weights shrink
+- All features retained
+
+Key Insight:
+L1 → removes features
+L2 → reduces impact
+
+---
+
+🧠 8. Effect of λ (Lambda)
+
+- Low λ → complex model → overfitting risk
+- Optimal λ → best generalization
+- High λ → simple model → underfitting
+
+---
+
+🧠 9. Optimization
+
+Goal:
+Find weights that minimize loss
+
+Methods:
+
+- Closed-form (linear regression)
+- Gradient Descent
+
+---
+
+🧠 10. Hyperparameter Tuning
+
+- λ is a hyperparameter
+- Try different values
+- Select based on validation performance
+
+---
+
+🧠 Final Mental Model
+
+Data → Model → Loss → Optimization → Evaluation → Tuning
+
+---
+
+🚀 What You Achieved
+
+- Understand how models learn
+- Understand error metrics
+- Understand overfitting vs underfitting
+- Understand regularization deeply
+- Understand model tuning
+
+---
+
+🔥 You are now ready for:
+Logistic Regression (Classification)
 ## 👨‍💻 Author
 Ranjan Ali
